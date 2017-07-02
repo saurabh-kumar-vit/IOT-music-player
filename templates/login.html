@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Quicksand:300,700" rel="stylesheet">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+		<script src="../static/js/jquery-3.2.1.min.js"></script>
+		<script src="../static/js/signIn.js"></script>
+		<style>
+		</style>
+
+	</head>
+
+	<body>
+		<div id="nav">
+			<ul>
+				<li> <a href="index.html"> Home </a> </li>
+				<li> <a href="login.html"> Login </a> </li>
+				<li> <a href="#"> About </a> </li>
+			</ul>
+		</div>
+
+		<div id="header">
+			<h1>RemoteMusic</h1>
+		</div>
+
+		<div id="login">
+			<h3>Login to your account.</h3>
+			<div id="log-info">
+				<form action="/validateLogin" method="post">
+					<p> Email: <input type="email" name="inputEmail" id="inputEmail"> </p> <br>
+					<p> Password: <input type="password" name="inputPassword" id="inputPassword"> </p> <br>
+					<button id="btnSignIn">Login</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

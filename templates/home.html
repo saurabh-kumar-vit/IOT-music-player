@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>RemoteMusic Home</title>
+		<style>
+
+		</style>
+
+		<strong><link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}"></strong>
+
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Quicksand:300,700" rel="stylesheet">
+		
+
+	</head>
+
+	<body>
+		<div id="nav">
+			<ul>
+				<li> <a href="/"> Home </a> </li>
+				<li> <a href="/showSignin"> Login </a> </li>
+				<li> <a href="/showSignUp"> SignUp </a> </li>
+			</ul>
+		</div>
+
+		<div id="header">
+			<div id="header-text">
+				<h1>RemoteMusic</h1>
+				<h2>Your Music, Anywhere.</h2>
+				<div id="info">
+				<p>Remotely upload and play your music on our server.</p>
+				<p>No hassels, fast and free!</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="sub-head">
+			<h1>Easy & Straight Forward.</h1>
+		</div>
+
+		<div class="steps">
+			<div class="step-text">
+				<h2>Step 1: Login & Upload your Music</h2>
+				<p>Login into your account or register if you don't already have. Once logged in, you can upload your music files to the server.</p>
+			</div>
+
+			<div class="step-img">
+				<img src="../static/upload.ico" alt="Upload Icon">
+			</div>
+		</div>
+
+		<div class="steps">
+
+			<div class="step-img">
+				<img src="../static/play.ico" alt="Upload Icon">
+			</div>
+
+			<div class="step-text">
+				<h2>Step 2: Play</h2>
+				<p>Once you've logged in to your account and uploaded your desired music files, you can click on the play button to start playing the song on the server.</p>
+			</div>
+
+		</div>
+
+	</body>
+</html>

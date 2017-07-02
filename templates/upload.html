@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Upload Your Music</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Quicksand:300,700" rel="stylesheet">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+		<!--<script src="../static/js/jquery-3.2.1.min.js"></script>
+		<script src="../static/js/signIn.js"></script> -->
+		<style>
+		</style>
+
+	</head>
+
+	<body>
+		<div id="nav">
+			<ul>
+				<li> <a href="/userHome"> Home </a> </li>
+				<li> <a href="/logout"> Logout </a> </li>
+				<li> <a href="#"> About </a> </li>
+			</ul>
+		</div>
+
+		<div id="header">
+			<h1>RemoteMusic</h1>
+		</div>
+
+		<div id="login">
+			<h3>Upload your music files here.</h3>
+			<div id="log-info">
+				 	<form action="upload" method="post" enctype="multipart/form-data">
+			        <input type="file" name="file"><br /><br />
+			        <input type="submit" value="Upload">
+			      </form>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>	
+<head>
+	<title>	Music Library</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Quicksand:300,700" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/music.css') }}">
+	<script src="../static/js/jquery-3.2.1.min.js"></script>
+
+	<style>
+		
+	</style>
+</head>
+
+<body>
+	<div id="nav">
+			<ul>
+				<li> <a href="index.html"> Home </a> </li>
+				<li> <a href="/logout"> Logout </a> </li>
+				<li> <a href="/showUpload"> Upload </a> </li>
+			</ul>
+		</div>
+
+	<div id="page-body">
+
+		<div id="header">
+			<h1>RemoteMusic</h1>
+		</div>
+		
+		<div id="top">
+			<h3>Welcome back to your music library!</h3>
+			<p>You'll find all your previously uploaded music tracks below.</p>
+		</div>
+
+		<div class="dispMusic">
+
+	</div>
+	</div>
+
+<script type='text/javascript'>
+    $(function() {
+        $.ajax({
+            url: '/getSong',
+            type: 'GET',
+            success: function(res) {
+            	var div=$('<div>')
+.attr('class', 'track')
+.append($('<div>')
+.attr('class', 'track-img')
+.append($('<img>')
+.attr('src', '../static/music.png')
+.attr('width' , '50')
+.attr('height', 50)),
+$('<div>')
+            .attr('class', 'track-desc')
+	.append($('<h4>'),
+$('<div>')
+            .attr('class', 'play')));
+
+
+    		var songObj = JSON.parse(res);
+				var song = '';
+				
+				$.each(songObj,function(index, value){
+					song = $(div).clone();
+					$(song).find('h4').text(value.Title);
+					$('.dispMusic').append(song);
+				});
+                console.log(res);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    });
+</script>	
+
+</body>
+</html>
